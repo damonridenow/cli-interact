@@ -17,6 +17,18 @@ Is it true (y/n)? y
 you answered: true
 ```
 
+## Example using getChar and new syntax
+
+```js
+var choices = ['All','None','First','Last'];
+var query = require('cli-interact').getChar;
+var answer;
+
+answer = query('Tell me one of '+choices.toString(), choices.toString());
+console.log('you answered:', answer);
+
+```
+
 ## Installation
 
 ```
@@ -29,7 +41,7 @@ npm install cli-interact
 
 Presently, there are three queries:
 
-`getChar` gets a single character from some set of allowed characters.
+`getChar` gets a single character from some set of allowed characters. (now it takes more than one character)
 
 `getIPversion` gets a single character, either '4' or '6'.
 
